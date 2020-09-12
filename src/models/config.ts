@@ -1,6 +1,6 @@
 export interface Config {
     prefix: string;
-    token: string;
+    client: ClientConfig;
     mysql: MySqlConfig;
     embedColor: string;
     emoji: string;
@@ -9,8 +9,30 @@ export interface Config {
     blacklist: string[];
     updateInterval: number;
     sharding: ShardingConfig;
-    clientOptions: ClientOptionsConfig;
     botSites: BotSitesConfig;
+}
+
+export interface ClientConfig {
+    token: string;
+    intents: string[];
+    partials: string[];
+    caches: CachesConfig;
+}
+
+export interface CachesConfig {
+    guilds: boolean;
+    channels: boolean;
+    overwrites: boolean;
+    roles: boolean;
+    emojis: boolean;
+    presences: boolean;
+    messages: MessagesConfig;
+}
+
+export interface MessagesConfig {
+    size: number;
+    lifetime: number;
+    sweepInterval: number;
 }
 
 export interface MySqlConfig {
@@ -32,14 +54,6 @@ export interface ShardingConfig {
     machineId: number;
     machineCount: number;
     serversPerShard: number;
-}
-
-export interface ClientOptionsConfig {
-    messageCacheMaxSize: number;
-    messageCacheLifetime: number;
-    messageSweepInterval: number;
-    intents: string[];
-    partials: string[];
 }
 
 export interface BotSitesConfig {
