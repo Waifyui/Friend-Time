@@ -1,4 +1,4 @@
-import { Client, ClientOptions, IntentsString, PartialTypes } from 'discord.js';
+import { Client, ClientOptions, IntentsString, PartialTypes } from 'discord.js-light';
 import { Bot } from './bot';
 import { ClearCommand } from './commands/clear-command';
 import { ConfigCommand } from './commands/config-command';
@@ -39,6 +39,12 @@ async function start(): Promise<void> {
         messageSweepInterval: config.clientOptions.messageSweepInterval,
         ws: { intents: config.clientOptions.intents as IntentsString[] },
         partials: config.clientOptions.partials as PartialTypes[],
+        cacheGuilds: true,
+        cacheChannels: true,
+        cacheOverwrites: true,
+        cacheRoles: true,
+        cacheEmojis: true,
+        cachePresences: true,
     };
 
     // Dependency Injection

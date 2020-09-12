@@ -1,4 +1,4 @@
-import { DMChannel, GuildMember, Message, TextChannel, User } from 'discord.js';
+import { DMChannel, GuildMember, Message, TextChannel, User } from 'discord.js-light';
 import { Logs } from '../models/internal-language';
 import { ServerData } from '../models/server-data';
 import { UserData } from '../models/user-data';

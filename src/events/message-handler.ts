@@ -1,4 +1,4 @@
-import { DMChannel, Message, TextChannel } from 'discord.js';
+import { DMChannel, Message, TextChannel } from 'discord.js-light';
 import { Command } from '../commands/command';
 import { HelpCommand } from '../commands/help-command';
 import { ReminderCommand } from '../commands/reminder-command';

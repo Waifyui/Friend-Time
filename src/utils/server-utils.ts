@@ -1,4 +1,4 @@
-import { Channel, Collection, DMChannel, Guild, GuildMember, TextChannel } from 'discord.js';
+import { Channel, Collection, DMChannel, Guild, GuildMember, TextChannel } from 'discord.js-light';
 
 export abstract class ServerUtils {
     public static getMemberDiscordIds(server: Guild): string[] {

@@ -1,4 +1,4 @@
-import { DiscordAPIError } from 'discord.js';
+import { DiscordAPIError } from 'discord.js-light';
 import { Response } from 'node-fetch';
 
 import { Tags } from '../models/internal-language';

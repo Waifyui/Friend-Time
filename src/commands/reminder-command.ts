@@ -1,4 +1,4 @@
-import { DMChannel, Message, TextChannel } from 'discord.js';
+import { DMChannel, Message, TextChannel } from 'discord.js-light';
 import { ServerData } from '../models/server-data';
 import { UserData } from '../models/user-data';
 import { MessageName } from '../services/language/message-name';

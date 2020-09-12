@@ -1,4 +1,4 @@
-import { Client, Message, MessageReaction, User } from 'discord.js';
+import { Client, Message, MessageReaction, User } from 'discord.js-light';
 import { MessageHandler } from './events/message-handler';
 import { ReactionHandler } from './events/reaction-handler';
 import { Logger } from './services/logger';

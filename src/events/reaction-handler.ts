@@ -1,4 +1,4 @@
-import { DMChannel, MessageReaction, User } from 'discord.js';
+import { DMChannel, MessageReaction, User } from 'discord.js-light';
 import { Logs } from '../models/internal-language';
 import { ServerData } from '../models/server-data';
 import { ServerRepo } from '../services/database/server-repo';

@@ -1,4 +1,4 @@
-import { Util } from 'discord.js';
+import { Util } from 'discord.js-light';
 
 export abstract class ShardUtils {
     public static async getRecommendedShards(

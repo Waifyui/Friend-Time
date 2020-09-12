@@ -1,4 +1,4 @@
-import { Message } from 'discord.js';
+import { Message } from 'discord.js-light';
 import { ServerUtils } from './server-utils';
 import { StringUtils } from './string-utils';
 

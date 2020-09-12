@@ -1,4 +1,4 @@
-import { DMChannel, Guild, Message, TextChannel } from 'discord.js';
+import { DMChannel, Guild, Message, TextChannel } from 'discord.js-light';
 import { ServerData } from '../models/server-data';
 import { UserData } from '../models/user-data';
 import { ServerRepo } from '../services/database/server-repo';
@@ -32,9 +32,6 @@ export class ConfigCommand implements Command {
         authorData: UserData,
         serverData?: ServerData
     ): Promise<void> {
-        let author = msg.author;
-        let server = msg.guild;
-
         if (!ServerUtils.isTextChannel(channel)) {
             this.msgSender.send(channel, authorData.LangCode, MessageName.serverOnly);
             return;
@@ -50,7 +47,7 @@ export class ConfigCommand implements Command {
             return;
         }
 
-        if (!UserUtils.isAdmin(author, channel as TextChannel)) {
+        if (!UserUtils.isAdmin(msg.member, channel as TextChannel)) {
             this.msgSender.send(channel, authorData.LangCode, MessageName.notAdmin);
             return;
         }
@@ -75,17 +72,17 @@ export class ConfigCommand implements Command {
         }
 
         if (subCommand === modeConfigName) {
-            this.processConfigMode(channel, server, args.slice(1), authorData.LangCode);
+            this.processConfigMode(channel, msg.guild, args.slice(1), authorData.LangCode);
             return;
         }
 
         if (subCommand === formatConfigName) {
-            this.processConfigFormat(channel, server, args.slice(1), authorData.LangCode);
+            this.processConfigFormat(channel, msg.guild, args.slice(1), authorData.LangCode);
             return;
         }
 
         if (subCommand === notifyConfigName) {
-            this.processConfigNotify(channel, server, args.slice(1), authorData.LangCode);
+            this.processConfigNotify(channel, msg.guild, args.slice(1), authorData.LangCode);
             return;
         }
     }

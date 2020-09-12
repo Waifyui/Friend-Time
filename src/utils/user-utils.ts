@@ -1,11 +1,11 @@
-import { TextChannel, User } from 'discord.js';
+import { GuildMember, TextChannel, User } from 'discord.js-light';
 
 export abstract class UserUtils {
     public static isBot(user: User): boolean {
         return user.bot;
     }
 
-    public static isAdmin(user: User, channel: TextChannel): boolean {
-        return channel.permissionsFor(user).has('ADMINISTRATOR');
+    public static isAdmin(member: GuildMember, channel: TextChannel): boolean {
+        return channel.permissionsFor(member).has('ADMINISTRATOR');
     }
 }

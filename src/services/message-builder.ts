@@ -1,4 +1,4 @@
-import { ColorResolvable, MessageEmbed } from 'discord.js';
+import { ColorResolvable, MessageEmbed } from 'discord.js-light';
 
 export class MessageBuilder {
     constructor(private embedColor: ColorResolvable) {}

@@ -1,4 +1,4 @@
-import { ShardingManager } from 'discord.js';
+import { ShardingManager } from 'discord.js-light';
 import { Logs } from './models/internal-language';
 import { Logger } from './services/logger';
 import { BotSite } from './services/sites/bot-site';
