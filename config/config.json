@@ -19,6 +19,7 @@
             "roles": true,
             "emojis": true,
             "presences": true,
+            "members": true,
             "messages": {
                 "size": 1,
                 "lifetime": 60,

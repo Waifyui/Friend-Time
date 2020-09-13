@@ -25,6 +25,7 @@ export interface CachesConfig {
     roles: boolean;
     emojis: boolean;
     presences: boolean;
+    members: boolean;
     messages: MessagesConfig;
 }
 

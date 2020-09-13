@@ -45,6 +45,7 @@ async function start(): Promise<void> {
         cacheRoles: config.client.caches.roles,
         cacheEmojis: config.client.caches.emojis,
         cachePresences: config.client.caches.presences,
+        fetchAllMembers: config.client.caches.members,
     };
 
     // Dependency Injection
