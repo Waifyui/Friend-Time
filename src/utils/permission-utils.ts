@@ -38,7 +38,12 @@ export abstract class PermissionUtils {
         }
 
         // VIEW_CHANNEL - Needed to view the channel
+        // READ_MESSAGE_HISTORY - Needed to react to messages
         // ADD_REACTIONS - Needed to add new reactions to messages
-        return channelPerms.has([Permissions.FLAGS.VIEW_CHANNEL, Permissions.FLAGS.ADD_REACTIONS]);
+        return channelPerms.has([
+            Permissions.FLAGS.VIEW_CHANNEL,
+            Permissions.FLAGS.READ_MESSAGE_HISTORY,
+            Permissions.FLAGS.ADD_REACTIONS,
+        ]);
     }
 }

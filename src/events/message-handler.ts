@@ -60,7 +60,7 @@ export class MessageHandler implements EventHandler {
         if (channel instanceof TextChannel && !PermissionUtils.canSendEmbed(channel)) {
             // No permission to send message
             if (PermissionUtils.canSend(channel)) {
-                let message = `I don't have all permissions required to send messages here!\n\nPlease allow me to **Read Messages**, **Send Messages**, and **Embed Links** in this channel.`;
+                let message = `I don't have all permissions required to send messages here!\n\nPlease allow me to **Embed Links** in this channel.`;
                 await channel.send(message);
             }
             return;
@@ -89,6 +89,9 @@ export class MessageHandler implements EventHandler {
             if (guildData.Mode !== 'List') {
                 // Check if I have permission to react
                 if (channel instanceof TextChannel && !PermissionUtils.canReact(channel)) {
+                    // TODO: Make embed
+                    let message = `I don't have all permissions required to react to messages here!\n\nPlease allow me to **Read Message History**, and **Add Reactions** in this channel.`;
+                    await channel.send(message);
                     return;
                 }
 
