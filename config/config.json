@@ -33,6 +33,7 @@
         }
     },
     "experience": {
+        "promptExpireTime": 120,
         "timeFormats": [
             {
                 "name": "12",

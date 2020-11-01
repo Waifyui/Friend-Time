@@ -46,6 +46,7 @@ export interface UpdateServerCountConfig {
 }
 
 export interface ExperienceConfig {
+    promptExpireTime: number;
     timeFormats: TimeFormat[];
     blacklist: string[];
 }
