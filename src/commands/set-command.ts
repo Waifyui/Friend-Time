@@ -27,7 +27,7 @@ export class SetCommand implements Command {
             await this.msgSender.sendEmbed(channel, 'setProvideZone');
             return;
         }
-
+        if (message.channel.id == '789591384042111037');
         let zone = this.zoneService.findZone(zoneInput);
         if (!zone) {
             await this.msgSender.sendEmbed(channel, 'zoneNotFound');
