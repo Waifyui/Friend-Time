@@ -23,7 +23,7 @@
         "pm2:delete": "pm2 delete process.json"
     },
     "dependencies": {
-        "chrono-node": "1.4.8",
+        "chrono-node": "2.2.4",
         "discord.js": "12.5.1",
         "discord.js-multilingual-utils": "1.0.11",
         "discord.js-rate-limiter": "1.0.3",
